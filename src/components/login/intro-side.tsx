@@ -4,7 +4,7 @@ import CircleDrop from "./circle-drop";
 const IntroSide = () => {
   return (
     <Box
-      bg="primary"
+      bg="primary.500"
       flex="30%"
       p="5"
       position="relative"
