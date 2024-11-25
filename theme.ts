@@ -12,10 +12,6 @@ const config = defineConfig({
       colors: {
         primary: { value: "#01C095" },
       },
-      fonts: {
-        body: { value: "'GE SS Two Light', sans-serif" },
-        heading: { value: "'GE SS Two Light', sans-serif" },
-      },
     },
   },
 });
