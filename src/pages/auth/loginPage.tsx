@@ -18,7 +18,7 @@ const LoginPage = () => {
   });
 
   const onSubmit = (data: LoginType) => {
-    if (data.username === "username" && data.password === "password") {
+    if (data.username === "user" && data.password === "password") {
       auth.login(data);
     }
   };
