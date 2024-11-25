@@ -10,7 +10,14 @@ const config = defineConfig({
     },
     tokens: {
       colors: {
-        primary: { value: "#01C095" },
+        primary: {
+          100: { value: "#00ffc7" },
+          200: { value: "#02f2bd" },
+          300: { value: "#05eab7" },
+          400: { value: "#04d8a9" },
+          500: { value: "#01C095" },
+          600: { value: "#00a781" },
+        },
       },
     },
   },
