@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from "components/ui/provider";
+import { ChakraProvider, createSystem } from "@chakra-ui/react";
 
 // Routes
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes";
 
+import themeConfig from "../theme";
+
+const system = createSystem(themeConfig);
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Provider>
+    <ChakraProvider value={system}>
       <RouterProvider router={routes} />
-    </Provider>
+    </ChakraProvider>
   </React.StrictMode>
 );
