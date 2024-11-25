@@ -1,5 +1,6 @@
 import { Box, Text, VStack } from "@chakra-ui/react";
 import CircleDrop from "./circle-drop";
+import { FaChartPie } from "react-icons/fa";
 
 const IntroSide = () => {
   return (
@@ -12,6 +13,7 @@ const IntroSide = () => {
       color="white"
       textAlign="center"
     >
+      <FaChartPie size="40px" />
       <VStack align="center" py="100px">
         <Text fontSize="35px" fontWeight="600">
           React Charts Task
