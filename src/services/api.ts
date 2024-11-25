@@ -1,17 +1,38 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { ItemResponse, ListResponse } from "./structure";
+import CryptoStorage from "lib/utils/cryptoStorage";
+import { UserInfo } from "store/auth.store";
 
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_PRIVATE_API_URL,
 });
 
 axiosInstance.interceptors.request.use((config) => {
-  console.log(config);
-  config.headers["username"] = `username`;
-  config.headers["password"] = `password`;
+  const data = CryptoStorage.getItem("authData") as UserInfo;
+
+  if (data && data.username && data.password) {
+    const authToken = btoa(`${data.username}:${data.password}`);
+    config.headers["Authorization"] = `Basic ${authToken}`;
+  }
 
   return config;
 });
+axiosInstance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response) {
+      if (error.response.status === 401) {
+        CryptoStorage.removeItem("isAuth");
+        CryptoStorage.removeItem("authData");
+        window.location.href = "/login";
+      }
+    } else {
+      console.error("No response available. Possible network error:", error);
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 class APIClient<T> {
   endpoint: string;
