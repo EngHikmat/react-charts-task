@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 import Loader from "components/loader";
 import Rbox from "components/r-box";
 import BarChart from "components/userMetrics/bar-chart";
@@ -21,7 +21,7 @@ const UserMetricsPage = () => {
   };
 
   return (
-    <Box>
+    <VStack align="stretch" gap="16px">
       <Rbox title="User Metrics Bar Chart" isBorder>
         {renderChart(BarChart)}
       </Rbox>
@@ -29,7 +29,7 @@ const UserMetricsPage = () => {
       <Rbox title="User Metrics Line Chart" isBorder>
         {renderChart(LineChart)}
       </Rbox>
-    </Box>
+    </VStack>
   );
 };
 
