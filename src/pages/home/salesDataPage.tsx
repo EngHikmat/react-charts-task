@@ -4,11 +4,12 @@ import Rbox from "components/r-box";
 import BarChart from "components/salesData/bar-chart";
 import LineChart from "components/salesData/line-chart";
 import PieChart from "components/salesData/pie-chart";
+import { Alert } from "components/ui/alert";
 
 import { useGetSalesData } from "services/hooks/SalesData";
 
 const SalesDataPage = () => {
-  const { data, isLoading } = useGetSalesData();
+  const { data, isLoading, isError, error } = useGetSalesData();
 
   const renderChart = (ChartComponent: React.ElementType) => {
     if (isLoading) {
@@ -17,6 +18,14 @@ const SalesDataPage = () => {
 
     if (!data) {
       return <Text>No data found</Text>;
+    }
+
+    if (isError) {
+      return (
+        <Alert status="error" title={error?.name}>
+          {error?.message}
+        </Alert>
+      );
     }
 
     return <ChartComponent data={data} />;
