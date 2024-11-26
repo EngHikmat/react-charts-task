@@ -52,10 +52,6 @@ const LineChart = ({ data }: PieChartProps) => {
                 title: {
                   display: true,
                   text: "Date",
-                  font: {
-                    size: 16,
-                    weight: "bold",
-                  },
                 },
                 grid: {
                   display: false,
@@ -65,10 +61,6 @@ const LineChart = ({ data }: PieChartProps) => {
                 title: {
                   display: false,
                   text: "Sales",
-                  font: {
-                    size: 16,
-                    weight: "bold",
-                  },
                 },
               },
             },

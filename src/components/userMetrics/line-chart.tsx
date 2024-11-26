@@ -56,10 +56,6 @@ const LineChart = ({ data }: PieChartProps) => {
                 title: {
                   display: true,
                   text: "Users",
-                  font: {
-                    size: 16,
-                    weight: "bold",
-                  },
                 },
                 grid: {
                   display: false,
@@ -69,10 +65,6 @@ const LineChart = ({ data }: PieChartProps) => {
                 title: {
                   display: false,
                   text: "Count",
-                  font: {
-                    size: 16,
-                    weight: "bold",
-                  },
                 },
               },
             },
