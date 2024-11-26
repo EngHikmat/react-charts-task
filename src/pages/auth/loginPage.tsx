@@ -50,6 +50,7 @@ const LoginPage = () => {
               <FormField
                 label="Password"
                 name="password"
+                type="password"
                 register={register}
                 error={errors.password?.message}
               />
