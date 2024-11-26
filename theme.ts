@@ -19,7 +19,7 @@ const config = defineConfig({
           600: { value: "#005aaf" },
         },
         secondary: {
-          300: { value: "#fbfbff" },
+          300: { value: "#fafafa" },
         },
       },
     },
