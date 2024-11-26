@@ -4,10 +4,15 @@ import LoginPage from "pages/auth/loginPage";
 import SalesDataPage from "pages/home/salesDataPage";
 import UserMetricsPage from "pages/home/userMetricsPage";
 import { createBrowserRouter } from "react-router-dom";
+import IsAuth from "isAuth";
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: (
+      <IsAuth page="dashboard">
+        <Layout />
+      </IsAuth>
+    ),
     children: [
       {
         path: "/",
@@ -26,7 +31,11 @@ const router = createBrowserRouter([
 
   {
     path: "/login",
-    element: <LoginPage />,
+    element: (
+      <IsAuth page="login">
+        <LoginPage />
+      </IsAuth>
+    ),
   },
 ]);
 
