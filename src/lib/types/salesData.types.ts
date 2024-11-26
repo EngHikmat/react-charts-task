@@ -1,8 +1,8 @@
 export type SalesData = {
   region: string;
   product: string;
-  actions: number;
-  data: string;
+  sales: number;
+  date: string;
 };
 
 export type SalesDataList = SalesData[];
