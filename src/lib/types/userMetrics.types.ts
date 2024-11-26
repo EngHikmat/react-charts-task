@@ -3,3 +3,5 @@ export type UserMetrics = {
   logins: number;
   actions: number;
 };
+
+export type UserMetricsList = UserMetrics[];

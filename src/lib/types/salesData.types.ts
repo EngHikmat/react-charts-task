@@ -4,3 +4,5 @@ export type SalesData = {
   actions: number;
   data: string;
 };
+
+export type SalesDataList = SalesData[];
