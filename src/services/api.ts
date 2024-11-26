@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { ItemResponse, ListResponse } from "./structure";
+import { ItemResponse } from "./structure";
 import CryptoStorage from "lib/utils/cryptoStorage";
 import { UserInfo } from "store/auth.store";
 
@@ -42,9 +42,7 @@ class APIClient<T> {
   }
 
   getList = (config?: AxiosRequestConfig) => {
-    return axiosInstance
-      .get<ListResponse<T>>(this.endpoint, config)
-      .then((res) => res.data);
+    return axiosInstance.get<T>(this.endpoint, config).then((res) => res.data);
   };
   getItem = (config?: AxiosRequestConfig) => {
     return axiosInstance
