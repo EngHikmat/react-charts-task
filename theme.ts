@@ -18,6 +18,9 @@ const config = defineConfig({
           500: { value: "#01C095" },
           600: { value: "#00a781" },
         },
+        secondary: {
+          300: { value: "#f4f4f4" },
+        },
       },
     },
   },

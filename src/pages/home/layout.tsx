@@ -12,7 +12,7 @@ const Layout = () => {
         <Header />
 
         {/* Main Content Section */}
-        <Box flex="1" overflowY="auto" p="5" bg="#f9f9f9">
+        <Box flex="1" overflowY="auto" p="5" bg="secondary.300">
           <Outlet />
         </Box>
       </VStack>
