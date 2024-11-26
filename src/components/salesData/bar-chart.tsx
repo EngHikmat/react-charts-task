@@ -68,7 +68,7 @@ const BarChart = ({ data }: PieChartProps) => {
                   text: "Sales",
                 },
                 grid: {
-                  display: false, // Remove grid lines for x-axis
+                  display: false,
                 },
               },
               y: {

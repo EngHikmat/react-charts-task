@@ -3,7 +3,6 @@ import { Chart as ChartJS, registerables } from "chart.js";
 import { Box } from "@chakra-ui/react";
 import { SalesDataList } from "lib/types/salesData.types";
 
-// Register the required chart components
 ChartJS.register(...registerables);
 
 type PieChartProps = {
@@ -16,10 +15,10 @@ const LineChart = ({ data }: PieChartProps) => {
         <Line
           data={{
             labels: data.map((item) => {
-              const date = new Date(item.date); // Parse the date string into a Date object
+              const date = new Date(item.date);
               return `${
                 date.getMonth() + 1
-              }/${date.getDate()}/${date.getFullYear()}`; // Format as MM/DD/YYYY
+              }/${date.getDate()}/${date.getFullYear()}`;
             }),
             datasets: [
               {

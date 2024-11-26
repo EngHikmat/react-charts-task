@@ -72,7 +72,7 @@ const BarChart = ({ data }: PieChartProps) => {
                   text: "Users",
                 },
                 grid: {
-                  display: false, // Remove grid lines for x-axis
+                  display: false,
                 },
               },
               y: {
