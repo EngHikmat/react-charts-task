@@ -11,15 +11,15 @@ const config = defineConfig({
     tokens: {
       colors: {
         primary: {
-          100: { value: "#00ffc7" },
-          200: { value: "#02f2bd" },
-          300: { value: "#05eab7" },
-          400: { value: "#04d8a9" },
-          500: { value: "#01C095" },
-          600: { value: "#00a781" },
+          100: { value: "#42a4ff" },
+          200: { value: "#007cf0" },
+          300: { value: "#0076e5" },
+          400: { value: "#006dd3" },
+          500: { value: "#0062bf" },
+          600: { value: "#005aaf" },
         },
         secondary: {
-          300: { value: "#f4f4f4" },
+          300: { value: "#fbfbff" },
         },
       },
     },
