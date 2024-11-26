@@ -1,19 +1,13 @@
-import { VStack } from "@chakra-ui/react";
-import {
-  ProgressCircleRing,
-  ProgressCircleRoot,
-} from "components/ui/progress-circle";
+import { Spinner, VStack } from "@chakra-ui/react";
 
 interface Props {
   size?: "sm" | "md" | "lg" | "xl" | "xs";
 }
 
-const Loader = ({ size = "md" }: Props) => {
+const Loader = ({ size = "lg" }: Props) => {
   return (
     <VStack>
-      <ProgressCircleRoot size={size} value={30} colorPalette={["blue"]}>
-        <ProgressCircleRing cap="round" />
-      </ProgressCircleRoot>
+      <Spinner size={size} color="primary.500" borderWidth="4px" />
     </VStack>
   );
 };
